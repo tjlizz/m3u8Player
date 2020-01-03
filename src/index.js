@@ -10,14 +10,14 @@ app.use(cookieParser('zzzz'));
 
 app.use(function (req, res, next) {
     if (req.url !== '/') {
-        console.log(req.signedCookies.bwf)
-        if (req.get('Referer') !== 'http://localhost:3000/') {
-            res.status(status[403]).send('Forbidden')
-        }
-        else {
-            next()
-        }
-        //  next()
+        // console.log(req.signedCookies.bwf)
+        // if (req.get('Referer') !== 'http://localhost:3000/') {
+        //     res.status(status[403]).send('Forbidden')
+        // }
+        // else {
+        //     next()
+        // }
+         next()
     } else {
         res.cookie("bwf", uuidv1(), { signed: true });
         next()
