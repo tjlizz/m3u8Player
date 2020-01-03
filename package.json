@@ -12,6 +12,7 @@
   "dependencies": {
     "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
-    "http-status": "^1.4.2"
+    "http-status": "^1.4.2",
+    "uuid": "^3.3.3"
   }
 }

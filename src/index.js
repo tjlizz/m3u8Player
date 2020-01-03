@@ -1,6 +1,7 @@
 var express = require('express');
 const path = require('path')
 var app = express();
+const uuidv1 = require('uuid/v1')
 const status = require('http-status');
 const cookieParser = require('cookie-parser');
 app.use(cookieParser('zzzz'));
@@ -18,7 +19,7 @@ app.use(function (req, res, next) {
         }
         //  next()
     } else {
-        res.cookie("bwf", "lzz12356", { signed: true });
+        res.cookie("bwf", uuidv1(), { signed: true });
         next()
     }
 
