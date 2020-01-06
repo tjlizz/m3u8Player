@@ -5,6 +5,8 @@ const uuidv1 = require('uuid/v1')
 const status = require('http-status');
 const cookieParser = require('cookie-parser');
 app.use(cookieParser('zzzz'));
+var cors = require('cors')
+app.use(cors())
 
 
 
